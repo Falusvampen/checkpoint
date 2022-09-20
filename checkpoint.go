@@ -5,7 +5,7 @@ import (
 )
 
 func main() {
-	printstr(rot13("Hello! How are You?"))
+	printstr(notitoa(2147483647))
 	z01.PrintRune('\n')
 }
 
@@ -13,11 +13,12 @@ func rot14(s string) string {
 	res := ""
 	for _, r := range s {
 		if r >= 'A' && r <= 'Z' {
-			res += string((r-'A'+13)%26 + 'A')
+			res += string((r-'A'+14)%26 + 'A')
 		} else if r >= 'a' && r <= 'z' {
-			res += string((r-'a'+13)%26 + 'a')
+			res += string((r-'a'+14)%26 + 'a')
 		}
 	}
+	return res
 }
 
 func alphamirror(s string) string {
@@ -38,9 +39,9 @@ func rot13(s string) string {
 	var res string
 	for _, r := range s {
 		if r >= 'A' && r <= 'Z' {
-			res += string((r-'A'+14)%26 + 'A')
+			res += string((r-'A'+13)%26 + 'A')
 		} else if r >= 'a' && r <= 'z' {
-			res += string((r-'a'+14)%26 + 'a')
+			res += string((r-'a'+13)%26 + 'a')
 		} else {
 			res += string(r)
 		}
