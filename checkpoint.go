@@ -1,12 +1,49 @@
 package main
 
 import (
+	"fmt"
+
 	"github.com/01-edu/z01"
 )
 
 func main() {
-	printstr(notitoa(2147483647))
-	z01.PrintRune('\n')
+	fmt.Println(compare("Hello!", "Hello!"))
+	fmt.Println(compare("Salut!", "lut!"))
+	fmt.Println(compare("Ola!", "Ol"))
+}
+
+func compare(a, b string) int {
+	if a == b {
+		return 0
+	} else if a < b {
+		return -1
+	} else {
+		return 1
+	}
+}
+
+func recursivesum(n int) int {
+	if n == 0 {
+		return 0
+	} else {
+		return n + recursivesum(n-1)
+	}
+}
+
+func Chunk(slice []int, size int) {
+
+	if size <= 0 {
+		fmt.Println("")
+	} else if len(slice) == 0 {
+		fmt.Println(slice)
+	} else {
+		a := make([][]int, 0, size)
+		for size < len(slice) {
+			a = append(a, slice[0:size])
+			slice = slice[size:]
+		}
+		fmt.Println(append(a, slice))
+	}
 }
 
 func rot14(s string) string {
