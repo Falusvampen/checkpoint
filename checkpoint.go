@@ -16,14 +16,6 @@ func Compare(a, b string) int {
 	}
 }
 
-func RecursiveSum(n int) int {
-	if n == 0 {
-		return 0
-	} else {
-		return n + RecursiveSum(n-1)
-	}
-}
-
 func Chunk(slice []int, size int) {
 
 	if size <= 0 {
@@ -81,22 +73,6 @@ func Max(a []int) int {
 		}
 	}
 	return max
-}
-
-func Itoa(n int) string {
-	if n == 0 {
-		return "0"
-	}
-	res := ""
-	for n > 0 {
-		res = string(n%10+48) + res
-		n /= 10
-	}
-	if n < 0 {
-		return "-" + Itoa(-n)
-	} else {
-		return res
-	}
 }
 
 func PrintStr(str string) {

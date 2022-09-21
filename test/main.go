@@ -1,8 +1,10 @@
 package main
 
-import "checkpoint"
+import (
+	"checkpoint"
+	"fmt"
+)
 
 func main() {
-	checkpoint.StrLen("hello")
-
+	fmt.Println(checkpoint.RecursiveSum(5))
 }
