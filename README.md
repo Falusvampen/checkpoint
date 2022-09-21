@@ -1,4 +1,4 @@
-# Project Title
+# Checkpoint tasks
 
 ## Table of Contents
 
@@ -6,5 +6,5 @@
 
 ## About <a name = "about"></a>
 
-Write about 1-2 paragraphs describing the purpose of your project.
+This is my repo consisting of functions that will be tested during the checkpoints throughout september.
 
