@@ -1,4 +1,4 @@
-package main
+package checkpoint
 
 import (
 	"fmt"
@@ -6,13 +6,7 @@ import (
 	"github.com/01-edu/z01"
 )
 
-func main() {
-	fmt.Println(compare("Hello!", "Hello!"))
-	fmt.Println(compare("Salut!", "lut!"))
-	fmt.Println(compare("Ola!", "Ol"))
-}
-
-func compare(a, b string) int {
+func Compare(a, b string) int {
 	if a == b {
 		return 0
 	} else if a < b {
@@ -22,11 +16,11 @@ func compare(a, b string) int {
 	}
 }
 
-func recursivesum(n int) int {
+func RecursiveSum(n int) int {
 	if n == 0 {
 		return 0
 	} else {
-		return n + recursivesum(n-1)
+		return n + RecursiveSum(n-1)
 	}
 }
 
@@ -46,7 +40,7 @@ func Chunk(slice []int, size int) {
 	}
 }
 
-func rot14(s string) string {
+func Rot14(s string) string {
 	res := ""
 	for _, r := range s {
 		if r >= 'A' && r <= 'Z' {
@@ -58,39 +52,11 @@ func rot14(s string) string {
 	return res
 }
 
-func alphamirror(s string) string {
-	res := ""
-	for _, r := range s {
-		if r >= 'a' && r <= 'z' {
-			res += string('z' + 'a' - r)
-		} else if r >= 'A' && r <= 'Z' {
-			res += string(155 - r)
-		} else {
-			res += string(r)
-		}
-	}
-	return res
-}
-
-func rot13(s string) string {
-	var res string
-	for _, r := range s {
-		if r >= 'A' && r <= 'Z' {
-			res += string((r-'A'+13)%26 + 'A')
-		} else if r >= 'a' && r <= 'z' {
-			res += string((r-'a'+13)%26 + 'a')
-		} else {
-			res += string(r)
-		}
-	}
-	return res
-}
-
 func ReduceInt(a []int, f func(int, int) int) {
 
 }
 
-func lastWord(s string) string {
+func LastWord(s string) string {
 
 	res := ""
 	for i := len(s) - 1; i > 0; i-- {
@@ -107,7 +73,7 @@ func StrLen(s string) int {
 	return len(s)
 }
 
-func max(a []int) int {
+func Max(a []int) int {
 	var max int
 	for _, e := range a {
 		if max < e {
@@ -117,7 +83,7 @@ func max(a []int) int {
 	return max
 }
 
-func itoa(n int) string {
+func Itoa(n int) string {
 	if n == 0 {
 		return "0"
 	}
@@ -127,13 +93,13 @@ func itoa(n int) string {
 		n /= 10
 	}
 	if n < 0 {
-		return "-" + itoa(-n)
+		return "-" + Itoa(-n)
 	} else {
 		return res
 	}
 }
 
-func printstr(str string) {
+func PrintStr(str string) {
 	for _, r := range str {
 		z01.PrintRune(r)
 	}
