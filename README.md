@@ -1,4 +1,4 @@
-# Project Title
+# Checkpoint tasks
 
 ## Table of Contents
 
