@@ -6,5 +6,5 @@ import (
 )
 
 func main() {
-	fmt.Println(checkpoint.RecursiveSum(5))
+	fmt.Println(checkpoint.Itoa(53452))
 }

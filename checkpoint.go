@@ -1,36 +1,34 @@
 package checkpoint
 
 import (
-	"fmt"
-
 	"github.com/01-edu/z01"
 )
 
-func Compare(a, b string) int {
-	if a == b {
-		return 0
-	} else if a < b {
-		return -1
-	} else {
-		return 1
-	}
-}
+// func Compare(a, b string) int {
+// 	if a == b {
+// 		return 0
+// 	} else if a < b {
+// 		return -1
+// 	} else {
+// 		return 1
+// 	}
+// }
 
-func Chunk(slice []int, size int) {
+// func Chunk(slice []int, size int) {
 
-	if size <= 0 {
-		fmt.Println("")
-	} else if len(slice) == 0 {
-		fmt.Println(slice)
-	} else {
-		a := make([][]int, 0, size)
-		for size < len(slice) {
-			a = append(a, slice[0:size])
-			slice = slice[size:]
-		}
-		fmt.Println(append(a, slice))
-	}
-}
+// 	if size <= 0 {
+// 		fmt.Println("")
+// 	} else if len(slice) == 0 {
+// 		fmt.Println(slice)
+// 	} else {
+// 		a := make([][]int, 0, size)
+// 		for size < len(slice) {
+// 			a = append(a, slice[0:size])
+// 			slice = slice[size:]
+// 		}
+// 		fmt.Println(append(a, slice))
+// 	}
+// }
 
 func Rot14(s string) string {
 	res := ""
