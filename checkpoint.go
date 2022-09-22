@@ -52,9 +52,8 @@ func LastWord(s string) string {
 	for i := len(s) - 1; i > 0; i-- {
 		if s[i] == ' ' && i != len(s)-1 {
 			break
-		} else {
-			res = string(s[i]) + res
 		}
+		res = string(s[i]) + res
 	}
 	return res
 }
