@@ -8,10 +8,12 @@ import (
 
 // Display last parameter
 func main() {
+	printstr(os.Args[len(os.Args)-1])
+	z01.PrintRune('\n')
+}
 
-	args := os.Args[len(os.Args)-1]
-	for _, e := range args {
+func printstr(s string) {
+	for _, e := range s {
 		z01.PrintRune(e)
 	}
-	z01.PrintRune('\n')
 }

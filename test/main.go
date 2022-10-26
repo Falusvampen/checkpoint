@@ -2,9 +2,8 @@ package main
 
 import (
 	"checkpoint"
-	"fmt"
 )
 
 func main() {
-	fmt.Println(checkpoint.Itoa(53452))
+	checkpoint.Tabmult(5)
 }

@@ -2,7 +2,7 @@ package checkpoint
 
 import "github.com/01-edu/z01"
 
-func tabmult(nbr int) {
+func Tabmult(nbr int) {
 
 	for j, e := 1, '1'; e <= '9'; e, j = e+1, j+1 {
 		z01.PrintRune(e)
