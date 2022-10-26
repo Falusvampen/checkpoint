@@ -54,16 +54,16 @@ func LastWord(s string) string {
 	return res
 }
 
-func StrLen(s string) int {
-	return len(s)
-}
+// func StrLen(s string) int {
+// 	return len(s)
+// }
 
-func Max(a []int) int {
-	var max int
-	for _, e := range a {
-		if max < e {
-			max = e
-		}
-	}
-	return max
-}
+// func Max(a []int) int {
+// 	var max int
+// 	for _, e := range a {
+// 		if max < e {
+// 			max = e
+// 		}
+// 	}
+// 	return max
+// }
