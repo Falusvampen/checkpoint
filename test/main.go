@@ -5,5 +5,5 @@ import (
 )
 
 func main() {
-	checkpoint.DisplayAlRevm()
+	checkpoint.CountDown()
 }
