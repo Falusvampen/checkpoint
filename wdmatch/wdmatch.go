@@ -1,32 +1,35 @@
 package main
 
 import (
+	"checkpoint"
 	"os"
-
-	"github.com/01-edu/z01"
 )
 
+func compare(s, s2 string) {
+	// make a variable to store the results
+	// loop through the first string
+	// loop through the second string and remember to save the index
+	result := ""
+	for _, e := range s {
+		
+		for i, e2 := range s2 {
+			if e == e2 {
+				// if the characters match, add the character to the result, 
+				result += string(e)
+				s2 = s2[i:]
+				break
+			}
+		}
+	}
+	if result == s {
+		checkpoint.PrintStr(result)
+	}
+}
+
 func main() {
+	// make sure there are two arguments
 	if len(os.Args) != 3 {
 		return
 	}
-	arg1 := os.Args[1]
-	arg2 := os.Args[2]
-	i := 0
-	j := 0
-	for i < len(arg1) && j < len(arg2) {
-		if arg1[i] == arg2[j] {
-			i++
-		}
-		j++
-	}
-	if i == len(arg1) {
-		// for _, c := range arg1 {
-		// 	z01.PrintRune(c)
-		// }
-		for _, c := range arg1 {
-			z01.PrintRune(c)
-		}
-		z01.PrintRune('\n')
-	}
+	compare(os.Args[1], os.Args[2])
 }
