@@ -2,10 +2,11 @@ package main
 
 import (
 	"checkpoint"
-	"fmt"
+
+	"github.com/01-edu/z01"
 )
 
 func main() {
 	a := "Hello World!"
-	fmt.Println(checkpoint.StrLen(a))
+	z01.PrintRune(checkpoint.LastRune(a))
 }
