@@ -5,5 +5,5 @@ import (
 )
 
 func main() {
-	checkpoint.Tabmult(5)
+	checkpoint.DisplayAlRevm()
 }

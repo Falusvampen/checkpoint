@@ -1,9 +1,5 @@
 package checkpoint
 
-import (
-	"github.com/01-edu/z01"
-)
-
 // func Compare(a, b string) int {
 // 	if a == b {
 // 		return 0
@@ -70,10 +66,4 @@ func Max(a []int) int {
 		}
 	}
 	return max
-}
-
-func PrintStr(str string) {
-	for _, r := range str {
-		z01.PrintRune(r)
-	}
 }
