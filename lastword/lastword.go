@@ -3,6 +3,8 @@ package main
 import (
 	"checkpoint"
 	"os"
+
+	"github.com/01-edu/z01"
 )
 
 func main() {
@@ -11,28 +13,25 @@ func main() {
 	}
 
 	checkpoint.PrintStr(lastWord(os.Args[1]))
+	z01.PrintRune('\n')
+}
+
+func rmEndSpace(s string) string {
+	for s[len(s)-1] == ' ' {
+		s = s[:len(s)-1]
+	}
+	return s
 }
 
 func lastWord(s string) string {
+	s = rmEndSpace(s)
 	result := ""
-	wordCount := 0
-	for i := len(s) - 1; i >= 0; i-- {
-		if s[i] != ' ' {
-			wordCount++
-		} else if wordCount > 0 {
-			if s[i] == ' ' {
-				break
-			}
-			result += string(s[i])
-			// function to reverse a string
+	for _, c := range s {
+		if c != ' ' {
+			result += string(c)
+		} else {
+			result = ""
 		}
 	}
-	return reverse(result)
-}
-func reverse(s string) string {
-	runes := []rune(s)
-	for i, j := 0, len(runes)-1; i < j; i, j = i+1, j-1 {
-		runes[i], runes[j] = runes[j], runes[i]
-	}
-	return string(runes)
+	return result
 }
