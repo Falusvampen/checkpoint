@@ -1,30 +1,5 @@
 package checkpoint
 
-// func Compare(a, b string) int {
-// 	if a == b {
-// 		return 0
-// 	} else if a < b {
-// 		return -1
-// 	} else {
-// 		return 1
-// 	}
-// }
-
-// func Chunk(slice []int, size int) {
-
-// 	if size <= 0 {
-// 		fmt.Println("")
-// 	} else if len(slice) == 0 {
-// 		fmt.Println(slice)
-// 	} else {
-// 		a := make([][]int, 0, size)
-// 		for size < len(slice) {
-// 			a = append(a, slice[0:size])
-// 			slice = slice[size:]
-// 		}
-// 		fmt.Println(append(a, slice))
-// 	}
-// }
 
 func Rot14(s string) string {
 	res := ""
@@ -38,12 +13,7 @@ func Rot14(s string) string {
 	return res
 }
 
-func ReduceInt(a []int, f func(int, int) int) {
-
-}
-
 func LastWord(s string) string {
-
 	res := ""
 	for i := len(s) - 1; i > 0; i-- {
 		if s[i] == ' ' && i != len(s)-1 {
@@ -53,17 +23,3 @@ func LastWord(s string) string {
 	}
 	return res
 }
-
-// func StrLen(s string) int {
-// 	return len(s)
-// }
-
-// func Max(a []int) int {
-// 	var max int
-// 	for _, e := range a {
-// 		if max < e {
-// 			max = e
-// 		}
-// 	}
-// 	return max
-// }
