@@ -1,7 +1,7 @@
 package checkpoint
 
 func DisplayAlpham() {
-	printstr("aBcDeFgHiJkLmNoPqRsTuVwXyZ")
+	PrintStr("aBcDeFgHiJkLmNoPqRsTuVwXyZ")
 }
 
 // func main() {
