@@ -1,7 +1,7 @@
 package checkpoint
 
 func DisplayAlRevm() {
-	printstr("zYxWvUtSrQpOnMlKjIhGfEdCbA")
+	PrintStr("zYxWvUtSrQpOnMlKjIhGfEdCbA")
 }
 
 // func printstr(s string) {
